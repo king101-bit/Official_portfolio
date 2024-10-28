@@ -4,7 +4,7 @@ import { FaTwitter, FaInstagram, FaGithub } from 'react-icons/fa';
 
 const ContactSection = () => {
     return (
-        <section style={{
+        <section id='contact' style={{
             background: 'linear-gradient(135deg, #111, #333)', 
             padding: '4rem 0',
             color: 'white',

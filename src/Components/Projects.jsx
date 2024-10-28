@@ -12,6 +12,7 @@ const Projects = () => {
   return (
     <section id="projects"
       className="d-flex"
+      id="projects"
       style={{ backgroundColor: "#121212"}}
     >
       <Container fluid>
