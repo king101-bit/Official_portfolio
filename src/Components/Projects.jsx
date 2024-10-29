@@ -161,7 +161,7 @@ const Projects = () => {
                         DAVID
                         </Card.Title>
                         <Card.Text>
-                        DAVID is a tool designed to provide location and carrier information about phone numbers. This tool is useful for individuals and businesses looking to validate phone numbers and get more information about the location of the phone number's owner. 
+                        DAVID is a tool designed to provide location and carrier information about phone numbers. This tool is useful for individuals and businesses looking to validate phone numbers and get more information about the location of the phone number&apos;s owner. 
                         </Card.Text>
                         <Button variant="outline-light" href="https://github.com/king101-bit/DAVID">
                           Visit me
