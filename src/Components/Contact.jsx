@@ -1,6 +1,5 @@
-import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import { FaTwitter, FaInstagram, FaGithub } from 'react-icons/fa';
+import { FaTwitter, FaGithub } from 'react-icons/fa';
 
 const ContactSection = () => {
     return (
@@ -12,29 +11,31 @@ const ContactSection = () => {
             position: 'relative',
         }}>
             <Container>
+            <h2 className="mb-3 text-center" style={{ fontWeight: 'bold' }}>Contact Me</h2>
                 <Row className="align-items-center">
-                    {/* Left Column: Social Media */}
                     <Col md={6} className="mb-4 mb-md-0">
-                        <h2 className="mb-3" style={{ fontWeight: 'bold' }}>Contact Me</h2>
                         <p style={{ fontSize: '1.2rem' }}>Follow me on social media</p>
                         <div className="social-icons d-flex justify-content-center mb-3">
                             <a href="https://twitter.com/krxzydev" target="_blank" rel="noopener noreferrer"
-                               style={{ margin: '0 10px', color: '#1DA1F2', transition: 'transform 0.2s' }}>
-                                <FaTwitter size={35} className="social-icon" />
+                               style={{ margin: '0 10px', color: '#1DA1F2', transition: 'transform 0.2s' }}
+                               onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.2)'}
+                               onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
+                                <FaTwitter size={35} />
                             </a>
                             <a href="https://github.com/king101-bit" target="_blank" rel="noopener noreferrer"
-                               style={{ margin: '0 10px', color: '#000000', transition: 'transform 0.2s' }}>
-                                <FaGithub size={35} className="social-icon" />
+                               style={{ margin: '0 10px', color: '#333', transition: 'transform 0.2s' }}
+                               onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.2)'}
+                               onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
+                                <FaGithub size={35} />
                             </a>
                         </div>
                     </Col>
 
-                    {/* Right Column: CTA */}
                     <Col md={6}>
-                        <h3 className="mb-3" style={{ fontWeight: 'bold', fontSize: '2.5rem' }}>
-                            Let's Create Something Awesome Together!
-                        </h3>
-                        <p className='lead' style={{ fontSize: '1.2rem' }}>Contact me for collaboration and projects</p>
+                        <p className="mb-3" style={{ fontWeight: 'bold', fontSize: '1.5rem' }}>
+                            Let&apos;s Create Something Awesome Together!
+                        </p>
+                        <p style={{ fontSize: '1.2rem' }}>Contact me for collaboration and projects</p>
                         <Button variant="light" size="lg" href='mailto:zackagba7@gmail.com' style={{
                             borderRadius: '30px',
                             padding: '0.75rem 2rem',
@@ -43,25 +44,18 @@ const ContactSection = () => {
                             transition: 'background-color 0.3s, transform 0.3s',
                         }}
                         onMouseEnter={(e) => {
-                            e.target.style.backgroundColor = '#ddd';
-                            e.target.style.transform = 'scale(1.05)';
+                            e.currentTarget.style.backgroundColor = '#ddd';
+                            e.currentTarget.style.transform = 'scale(1.05)';
                         }}
                         onMouseLeave={(e) => {
-                            e.target.style.backgroundColor = '';
-                            e.target.style.transform = 'scale(1)';
+                            e.currentTarget.style.backgroundColor = '';
+                            e.currentTarget.style.transform = 'scale(1)';
                         }}>
                             Get In Touch
                         </Button>
                     </Col>
                 </Row>
             </Container>
-
-            {/* Styles for Hover Animations */}
-            <style jsx>{`
-                .social-icons a:hover {
-                    transform: scale(1.2);
-                }
-            `}</style>
         </section>
     );
 };
