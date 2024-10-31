@@ -7,6 +7,7 @@ import Header from "./Components/Header.jsx";
 import Skillset from "./Components/Skillset.jsx";
 import Projects from "./Components/Projects.jsx";
 import Contact from "./Components/Contact.jsx";
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Skillset />
       <Projects />
       <Contact />
+      <Analytics />
     </>
   );
 }

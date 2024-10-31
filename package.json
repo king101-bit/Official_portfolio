@@ -9,10 +9,11 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "homepage": "https://king101-bit.github.io/official_portfolio",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.3.2",
     "bootstrap": "^5.3.3",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.5",

@@ -1,4 +1,3 @@
-import React from 'react';
 import myImage from '../assets/images/undraw_website_5bo8-removebg-preview.png';
 import { Typewriter } from "react-simple-typewriter";
 import { Button } from 'react-bootstrap';
@@ -27,7 +26,7 @@ function Header() {
             <div className="col-12 col-md-6 text-center text-md-start">
               <h1 className="display-4 fw-bold">
                 <Typewriter
-                  words={['Ndeewo','Sannu','Bàwo ni','Hello', 'Hallo', 'Hola', 'Bonjour', 'Ciao', 'Olá', 'Привет', '你好', 'こんにちは', '안녕하세요', 'مرحبا', 'नमस्ते', 'হ্যালো', 'سلام', 'سلام', 'Habari', 'Merhaba']}
+                  words={['Bàwo ni','Ndeewo','Sannu','Hello', 'Hallo', 'Hola', 'Bonjour', 'Ciao', 'Olá', 'Привет', '你好', 'こんにちは', '안녕하세요', 'مرحبا', 'नमस्ते', 'হ্যালো', 'سلام', 'سلام', 'Habari', 'Merhaba']}
                   loop={Infinity}
                   cursor
                   cursorStyle="_"
