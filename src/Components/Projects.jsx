@@ -59,9 +59,13 @@ const Projects = () => {
   }, []);
 
   return (
-    <section id="projects" className="d-flex" style={{ backgroundColor: "#121212" }}>
+    <section
+      id="projects"
+      className="d-flex"
+      style={{ backgroundColor: "#f5f5f5" }}
+    >
       <Container fluid>
-        <h1 className="text-center mb-4" style={{ color: "white" }}>
+        <h1 className="text-center mb-4" style={{ color: "black" }}>
           Projects
         </h1>
         <Col xs={12} className="mb-4">
@@ -76,7 +80,7 @@ const Projects = () => {
                     style={{
                       width: "18rem",
                       margin: "0.5rem",
-                      backgroundColor: "#3e3b3b",
+                      backgroundColor: "#f7f9fc",
                     }}
                   >
                     <Card.Body>
@@ -91,7 +95,10 @@ const Projects = () => {
                           <span className="placeholder col-4"></span>
                         </span>
                       </Card.Text>
-                      <Button variant="link" className="placeholder col-6"></Button>
+                      <Button
+                        variant="link"
+                        className="placeholder col-6"
+                      ></Button>
                     </Card.Body>
                   </Card>
                 ))}
@@ -99,7 +106,13 @@ const Projects = () => {
             ) : (
               <Row className="justify-content-center">
                 {projectData.map((project, index) => (
-                  <Col key={index} xs={12} md={6} lg={4} className="d-flex mb-4">
+                  <Col
+                    key={index}
+                    xs={12}
+                    md={6}
+                    lg={4}
+                    className="d-flex mb-4"
+                  >
                     <Card
                       className="project-card"
                       style={{
@@ -111,11 +124,15 @@ const Projects = () => {
                       }}
                     >
                       <Card.Body>
-                        <Card.Title style={{ fontWeight: "bold" }}>{project.title}</Card.Title>
+                        <Card.Title style={{ fontWeight: "bold" }}>
+                          {project.title}
+                        </Card.Title>
                         <Card.Text>{project.description}</Card.Text>
                         <div>
-                          <small>Stars: {project.stars}</small><br />
-                          <small>Last Updated: {project.lastUpdated}</small><br />
+                          <small>Stars: {project.stars}</small>
+                          <br />
+                          <small>Last Updated: {project.lastUpdated}</small>
+                          <br />
                         </div>
                         <Button variant="outline-light" href={project.link}>
                           Visit me
