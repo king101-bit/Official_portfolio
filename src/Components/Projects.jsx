@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
-
+import "../assets/ProjectsSection.css";
 const Projects = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [projectData, setProjectData] = useState([]);
@@ -61,7 +61,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="d-flex"
+      className="projects-section"
       style={{ backgroundColor: "#f5f5f5" }}
     >
       <Container fluid>
@@ -104,7 +104,7 @@ const Projects = () => {
                 ))}
               </Row>
             ) : (
-              <Row className="justify-content-center">
+              <Row className="justify-content-center g-2">
                 {projectData.map((project, index) => (
                   <Col
                     key={index}
@@ -117,25 +117,82 @@ const Projects = () => {
                       className="project-card"
                       style={{
                         width: "100%",
-                        backgroundColor: "#1e1e1e",
+                        backgroundColor: "#1f1f1f",
                         color: "white",
-                        borderRadius: "8px",
-                        boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.2)",
+                        borderRadius: "16px",
+                        boxShadow: "0px 6px 18px rgba(0, 0, 0, 0.3)",
+                        overflow: "hidden",
+                        transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                        position: "relative",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = "scale(1.05)";
+                        e.currentTarget.style.boxShadow =
+                          "0px 8px 24px rgba(0, 0, 0, 0.5)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = "scale(1)";
+                        e.currentTarget.style.boxShadow =
+                          "0px 6px 18px rgba(0, 0, 0, 0.3)";
                       }}
                     >
-                      <Card.Body>
-                        <Card.Title style={{ fontWeight: "bold" }}>
+                      <Card.Body style={{ padding: "1.5rem" }}>
+                        <Card.Title
+                          style={{
+                            fontWeight: "bold",
+                            fontSize: "1.5rem",
+                            marginBottom: "1rem",
+                            color: "#e9e9e9",
+                          }}
+                        >
                           {project.title}
                         </Card.Title>
-                        <Card.Text>{project.description}</Card.Text>
-                        <div>
-                          <small>Stars: {project.stars}</small>
-                          <br />
-                          <small>Last Updated: {project.lastUpdated}</small>
-                          <br />
+                        <Card.Text
+                          style={{
+                            fontSize: "1rem",
+                            lineHeight: "1.6",
+                            color: "#bdbdbd",
+                          }}
+                        >
+                          {project.description}
+                        </Card.Text>
+                        <div
+                          style={{ marginTop: "1rem", marginBottom: "1.5rem" }}
+                        >
+                          <small
+                            style={{
+                              display: "block",
+                              color: "#a0a0a0",
+                              marginBottom: "0.3rem",
+                            }}
+                          >
+                            ⭐ Stars: {project.stars}
+                          </small>
+                          <small style={{ display: "block", color: "#a0a0a0" }}>
+                            ⏰ Last Updated: {project.lastUpdated}
+                          </small>
                         </div>
-                        <Button variant="outline-light" href={project.link}>
-                          Visit me
+                        <Button
+                          variant="outline-light"
+                          href={project.link}
+                          style={{
+                            borderRadius: "30px",
+                            padding: "0.75rem 1.5rem",
+                            fontWeight: "bold",
+                            boxShadow: "0px 4px 12px rgba(255, 255, 255, 0.3)",
+                            transition: "all 0.3s ease",
+                          }}
+                          onMouseEnter={(e) => {
+                            e.currentTarget.style.backgroundColor = "#f5f5f5";
+                            e.currentTarget.style.color = "#1f1f1f";
+                          }}
+                          onMouseLeave={(e) => {
+                            e.currentTarget.style.backgroundColor =
+                              "transparent";
+                            e.currentTarget.style.color = "white";
+                          }}
+                        >
+                          Visit Me
                         </Button>
                       </Card.Body>
                     </Card>
